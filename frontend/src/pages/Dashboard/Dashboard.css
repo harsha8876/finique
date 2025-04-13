@@ -1,0 +1,108 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #10002B; /* Primary color */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #fff; /* White text for better contrast */
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #7B2CBF; /* Accent color for the border */
+  }
+  
+  .dashboard-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #C77DFF; /* Light purple */
+    margin: 0;
+  }
+  
+  .dashboard-balance {
+    background-color: #240046; /* Dark purple */
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #C77DFF; /* Light purple for balance text */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .balance-amount {
+    font-weight: 600;
+    color: #5A189A; /* Accent color for the balance amount */
+    font-size: 18px;
+    transition: all 0.5s ease-in-out; /* Smooth transition for number change */
+  }
+  
+  .dashboard-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .dashboard-button {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 120px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Recharge button */
+  .recharge-button {
+    background-color: #3C096C; /* Accent color */
+    color: #FFF; /* Light purple text */
+  }
+  
+  /* Transfer button */
+  .transfer-button {
+    background-color: #5A189A; /* Another accent color */
+    color: #fff;
+  }
+  
+  /* Payment History button */
+  .payment-history-button {
+    background-color: #7B2CBF; /* Another accent color */
+    color: #fff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    
+    .dashboard-buttons {
+      grid-template-columns: 1fr;
+    }
+    
+    .dashboard-button {
+      height: 80px;
+    }
+  }
+  
