@@ -1,84 +1,91 @@
 /* General styles for the login page container */
 .login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #240046;  /* Title color */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Styling for the form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  /* Space between the inputs */
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #C77DFF;  /* Light purple border */
+  font-size: 16px;
+  color: #333;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #5A189A;  /* Dark purple on focus */
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  background-color: #3C096C;  /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5A189A;  /* Lighter purple on hover */
+}
+
+/* Error message styles */
+p.error {
+  font-size: 14px;
+  color: red;  /* Error color */
+  margin-top: 10px;
+}
+
+/* Link styles for Sign Up prompt */
+p {
+  font-size: 14px;
+  color: #7B2CBF;  /* Soft purple */
+}
+
+p a {
+  color: #9D4EDD;  /* Light purple for the sign-up link */
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+  color: #C77DFF;  /* Even lighter purple on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 15px;
   }
-  
+
   h2 {
-    color: #240046;  /* Title color */
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 1.8em;
   }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;  /* Space between the inputs */
-  }
-  
-  .login-form input {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #C77DFF;  /* Light purple border */
-    font-size: 16px;
-    color: #333;
-    transition: border 0.3s ease;
-  }
-  
-  .login-form input:focus {
-    border-color: #5A189A;  /* Dark purple on focus */
-    outline: none;
-  }
-  
+
   button {
-    padding: 12px;
-    background-color: #3C096C;  /* Primary button color */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #5A189A;  /* Lighter purple on hover */
-  }
-  
-  /* Link styles for Sign Up prompt */
-  p {
     font-size: 14px;
-    color: #7B2CBF;  /* Soft purple */
   }
-  
-  p a {
-    color: #9D4EDD;  /* Light purple for the sign-up link */
-    text-decoration: none;
-  }
-  
-  p a:hover {
-    text-decoration: underline;
-    color: #C77DFF;  /* Even lighter purple on hover */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .login-container {
-      width: 90%;
-      padding: 15px;
-    }
-  
-    h2 {
-      font-size: 1.8em;
-    }
-  
-    button {
-      font-size: 14px;
-    }
-  }
-  
+}

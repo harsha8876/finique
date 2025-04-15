@@ -4,7 +4,8 @@ import './Header.css';
 import Cookies from 'js-cookie';
 
 const Header = () => {
-  const isLoggedIn = !!Cookies.get('email'); // Check if logged in
+  // Check if the required cookies (email and balance) are set to determine if the user is logged in
+  const isLoggedIn = !!Cookies.get('email') && !!Cookies.get('balance');
   const redirectPath = isLoggedIn ? '/dashboard' : '/';
 
   return (
@@ -14,8 +15,12 @@ const Header = () => {
       </Link>
       <nav className="nav">
         <ul>
-          <li>Services</li>
-          <li>About us</li>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
+          <li>
+            <Link to="/aboutus">About Us</Link>
+          </li>
           {!isLoggedIn && (
             <li>
               <Link to="/signup">
@@ -28,10 +33,11 @@ const Header = () => {
               <button
                 className="logout-button"
                 onClick={() => {
+                  // Remove the cookies during logout
                   Cookies.remove('email');
                   Cookies.remove('balance');
                   Cookies.remove('firstName');
-                  window.location.href = '/';
+                  window.location.href = '/'; // Redirect to home page after logout
                 }}
               >
                 Logout

@@ -1,0 +1,36 @@
+.services-page {
+    background-color: #240046;
+    color: white;
+    padding: 40px;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #7B2CBF;
+    margin-bottom: 40px;
+  }
+  
+  .services-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #3C096C;
+    border: 2px solid #5A189A;
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    background-color: #5A189A;
+  }
+  

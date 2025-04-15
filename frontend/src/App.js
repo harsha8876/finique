@@ -9,6 +9,9 @@ import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import Recharge from "./pages/Recharge/Recharge.jsx";
 import TransactionHistory from "./pages/TransactionHistory/TransactionHistory.jsx";
 import AccountTransfer from "./pages/AccountTransfer/AccountTransfer.jsx";
+import AboutUs from "./pages/staticPages/aboutus.jsx";
+import Services from "./pages/staticPages/services.jsx";
+
 
 function App() {
   return (
@@ -23,6 +26,8 @@ function App() {
           <Route path="/recharge" element={<Recharge/>}/>
           <Route path="/transactions" element={<TransactionHistory/>}/>
           <Route path="/transfer" element={<AccountTransfer/>}/>
+          <Route path="/services" element={<AboutUs/>}/>
+          <Route path="/aboutus" element={<Services/>}/>
         </Routes>
       </main>
     </Router>
